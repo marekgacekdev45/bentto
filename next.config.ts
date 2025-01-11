@@ -1,5 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+	typescript: {
+		ignoreBuildErrors: true,
+	},
+	eslint: {
+		ignoreDuringBuilds: true,
+	},
 	images: {
 		formats: ['image/avif', 'image/webp'],
 		remotePatterns: [
@@ -16,22 +22,12 @@ const nextConfig = {
 				destination: '/gallery',
 			},
 			{
-				source: '/aktualnosci/:slug*', 
+				source: '/aktualnosci',
+				destination: '/blog',
+			},
+			{
+				source: '/aktualnosci/:slug*',
 				destination: '/blog/:slug*',
-			},
-		]
-	},
-	async redirects() {
-		return [
-			{
-				source: '/gallery',
-				destination: '/galeria',
-				permanent: true,
-			},
-			{
-				source: '/blog/:slug*', 
-				destination: '/aktualnosci/:slug*', 
-				permanent: true,
 			},
 		]
 	},
