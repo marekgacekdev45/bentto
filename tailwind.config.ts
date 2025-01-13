@@ -10,9 +10,11 @@ export default {
 	theme: {
 		extend: {
 			screens: {
-				xs: '390px',
+				xxs:'350px',
+				xs: '450px',
 				max: '2200px',
 			},
+		
 			colors: {
 				primary: {
 					'200': '#ffffff',
@@ -26,7 +28,6 @@ export default {
 				text: '#4E4B66',
 				heading: '#000000',
 			},
-			
 		},
 	},
 	plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],

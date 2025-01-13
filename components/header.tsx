@@ -60,13 +60,13 @@ const Topbar = () => {
 		<div className={`w-full duration-300 ${isVisible ? '' : 'hidden'}`}>
 			<ul className='flex justify-end border-b py-4 pr-4 lg:pr-8 '>
 				<li className='border-r px-4 group'>
-					<Link href='tel:+48602270903' className='topbar_link'>
+					<Link href='tel:+48602270903' className='topbar_link' aria-label="Zadzwoń">
 						<Phone className='topbar_link-icon ' />
 						<span className=' topbar_link-text link-hover--group !hidden md:!block'>+48 602-270-903</span>
 					</Link>
 				</li>
 				<li className='lg:border-r pl-4 lg:px-4 group'>
-					<Link href='mailto:bentto@onet.eu' className='topbar_link '>
+					<Link href='mailto:bentto@onet.eu' className='topbar_link ' aria-label="Napisz">
 						<Mail className='topbar_link-icon ' />
 						<span className=' topbar_link-text link-hover--group !hidden md:!block'>bentto@onet.eu</span>
 					</Link>
@@ -76,7 +76,7 @@ const Topbar = () => {
 						href='https://maps.app.goo.gl/LpyzjWDadgucufKh8'
 						target='_blank'
 						rel='noreferrer nofollow'
-						className='topbar_link'>
+						className='topbar_link' aria-label="Zobacz adres">
 						<MapPin className='topbar_link-icon' />
 						<span className='topbar_link-text link-hover--group'>Szaflarska 61, Nowy Targ</span>
 					</Link>
@@ -109,10 +109,10 @@ const Navbar = () => {
 
 			<div className='lg:hidden'>
 				<Sheet>
-					<SheetTrigger>
-						<div className='bg-secondary-400 rounded-md p-2 '>
+					<SheetTrigger aria-label="Otwórz menu"className='bg-secondary-400 rounded-md p-2'>
+						
 							<Menu className='size-7 text-white' />
-						</div>
+						
 					</SheetTrigger>
 					<SheetContent className='bg-white'>
 						<SheetHeader>
@@ -152,7 +152,7 @@ const Header = () => {
 		<header className='fixed top-0 inset-x-0  bg-primary-200 shadow-lg z-50'>
 			<div className='flex max-w-screen-max mx-auto'>
 				<Link href='/' className='pl-4 lg:w-[20%] 2xl:w-[15%] flex justify-center items-center   bg-primary-400 px-4'>
-					<Image src={logo} alt='Bentto - Urządzenia Gastronomiczne' width={280} height={100} className='' />
+					<Image src={logo} alt='Bentto - Urządzenia Gastronomiczne' width={280} height={100} priority />
 				</Link>
 				<div className='w-[75%] lg:w-[80%] 2xl:w-[85%] flex flex-col'>
 					<Topbar />

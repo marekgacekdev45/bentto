@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import { Poppins } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 import './globals.css'
 
-const poppins = Poppins({ weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'], subsets: ['latin'] })
+const montserrat = Montserrat({ weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'], subsets: ['latin'] })
 
 export const metadata: Metadata = {
 	title: 'Bentto - Urządzenia Gastonomiczne Nowy Targ',
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='pl'>
-			<body className={`${poppins.className}  antialiased `}>
+			<body className={`${montserrat.className}  antialiased `}>
 				
 				{children}
 				
