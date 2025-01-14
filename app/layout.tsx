@@ -1,8 +1,11 @@
 import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.css'
 
-const montserrat = Montserrat({ weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'], subsets: ['latin'] })
+const inter = Inter({
+	weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+	subsets: ['latin'],
+})
 
 export const metadata: Metadata = {
 	title: 'Bentto - Urządzenia Gastonomiczne Nowy Targ',
@@ -17,11 +20,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='pl'>
-			<body className={`${montserrat.className}  antialiased `}>
-				
-				{children}
-				
-			</body>
+			<body className={`${inter.className}  antialiased `}>{children}</body>
 		</html>
 	)
 }
