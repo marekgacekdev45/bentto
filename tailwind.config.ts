@@ -19,7 +19,7 @@ export default {
 				primary: {
 					'200': '#ffffff',
 					'400': '#f7f7f7',
-					'600': '',
+					'600': '#efefef',
 				},
 				secondary: {
 					200: '#b5453f',

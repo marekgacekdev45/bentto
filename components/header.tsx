@@ -15,7 +15,7 @@ const navLinks = [
 	{
 		id: 1,
 		title: 'O nas',
-		href: '/',
+		href: '/#o-nas',
 		desktop: true,
 	},
 	{
@@ -98,7 +98,7 @@ const Navbar = () => {
 						<li key={item.id} className={`${item.desktop ? '' : '2xl:hidden'}`}>
 							<Link
 								href={item.href}
-								className={`uppercase text-[19px] font-semibold ${pathname === item.href ? 'link-active' : 'link-hover'}`}>
+								className={`uppercase text-[19px] font-bold text-black ${pathname === item.href ? 'link-active' : 'link-hover'}`}>
 								{item.title}
 							</Link>
 						</li>
