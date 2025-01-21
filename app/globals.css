@@ -23,7 +23,7 @@
 	}
 
 	.heading {
-		@apply uppercase text-[42px] font-black text-black  tracking-wider leading-[3rem];
+		@apply uppercase  text-[25px]  xxs:text-3xl xs:text-4xl sm:text-[42px] font-black text-black  tracking-wider leading-[3rem];
 	}
 	.text {
 		@apply leading-relaxed text-lg;

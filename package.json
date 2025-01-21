@@ -25,6 +25,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-email": "^3.0.4",
+    "react-fast-marquee": "^1.6.5",
     "react-hook-form": "^7.54.1",
     "resend": "^4.0.1",
     "sanity": "^3.67.1",
