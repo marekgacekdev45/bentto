@@ -30,12 +30,12 @@ const offers = [
 
 const About = () => {
 	return (
-		<section id='o-nas' className='pt-5 sm:pt-10 pb-10'>
+		<section id='o-nas' className='pt-5 sm:pt-10 pb-10 xl:mt-32 2xl:mt-12'>
 			<div className='wrapper !max-w-screen-xl'>
 				<div className='max-w-screen-md mx-auto text-center space-y-1'>
 					<span className='preheading'>Nasza bogata oferta</span>
 					<h2 className='heading'>Wszystko dla Twojej restauracji</h2>
-					<p className='leading-relaxed sm:text-lg pt-4'>
+					<p className='text pt-4'>
 						Z dumą prezentujemy naszą wszechstronną ofertę sprzętu gastronomicznego, kompleksowego serwisu oraz
 						projektowania kuchni, specjalnie dostosowaną do Twojej restauracji. Ułatwiamy Ci nie tylko zakup niezbędnego
 						wyposażenia, ale także zapewniamy profesjonalny serwis i projektujemy kuchnie, które spełnią Twoje
@@ -53,12 +53,12 @@ const About = () => {
 								dangerouslySetInnerHTML={{ __html: offer.title }}
 							/>
 							<p className='text group-hover:!text-primary-200 !duration-500'>{offer.description}</p>
-							<Image src={offer.image} alt={offer.title} className='-z-10' fill quality={40} />
+							<Image src={offer.image} alt={offer.title} className='-z-10 object-cover' fill quality={40} />
 						</div>
 					))}
 				</div>
 				<div className='flex justify-center'>
-					<Button href='/#oferta' label='Zobacz ofertę' className='' />
+					<Button href='/#oferta' label='Zobacz ofertę' />
 				</div>
 			</div>
 		</section>

@@ -5,7 +5,7 @@
 @layer base {
 
 	html{
-		@apply scroll-smooth
+		@apply scroll-smooth scroll-pt-16
 	}
 
 	body {
@@ -25,9 +25,12 @@
 	.heading {
 		@apply uppercase  text-[25px]  xxs:text-3xl xs:text-4xl sm:text-[42px] font-black text-black  tracking-wider leading-[3rem];
 	}
+
 	.text {
-		@apply leading-relaxed text-lg;
+		@apply leading-relaxed md:text-lg;
 	}
+
+
 	.link-hover {
 		@apply relative w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-secondary-400 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left;
 	}

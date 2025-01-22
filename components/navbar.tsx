@@ -18,21 +18,31 @@ const navLinks = [
 		id: 1,
 		title: 'O nas',
 		href: '/#o-nas',
+		desktop: true,
 	},
 	{
 		id: 2,
 		title: 'Oferta',
-		href: '/oferta',
+		href: '/#oferta',
+		desktop: true,
 	},
 	{
 		id: 3,
 		title: 'Aktualności',
 		href: '/aktualnosci',
+		desktop: true,
 	},
 	{
 		id: 4,
 		title: 'Galeria',
 		href: '/galeria',
+		desktop: true,
+	},
+	{
+		id: 5,
+		title: 'Kontakt',
+		href: '/Kontakt',
+		desktop: false,
 	},
 ]
 
@@ -44,15 +54,18 @@ const Navbar = () => {
 		<div className='flex justify-end lg:justify-between items-center py-2 sm:py-4 pr-8 lg:pr-12 pl-12 2xl:pl-20 '>
 			<nav className='hidden lg:block'>
 				<ul className='flex gap-6'>
-					{navLinks.map(item => (
-						<li key={item.id}>
-							<Link
-								href={item.href}
-								className={`uppercase text-lg font-bold text-black ${pathname === item.href ? 'link-active' : 'link-hover'}`}>
-								{item.title}
-							</Link>
-						</li>
-					))}
+					{navLinks.map(
+						item =>
+							item.desktop && (
+								<li key={item.id}>
+									<Link
+										href={item.href}
+										className={`uppercase text-lg font-bold text-black ${pathname === item.href ? 'link-active' : 'link-hover'}`}>
+										{item.title}
+									</Link>
+								</li>
+							)
+					)}
 				</ul>
 			</nav>
 			<Button href='/kontakt' label='Kontakt' className='hidden lg:inline-flex ' />

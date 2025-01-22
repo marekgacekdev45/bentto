@@ -20,6 +20,7 @@ export default {
 					'200': '#ffffff',
 					'400': '#f7f7f7',
 					'600': '#efefef',
+					'700':"#e8e8e8",
 					'800': '#bababa',
 				},
 				secondary: {

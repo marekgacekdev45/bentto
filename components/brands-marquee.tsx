@@ -42,7 +42,7 @@ const brands = [
 
 const BrandsMarquee = () => {
 	return (
-		<Marquee autoFill pauseOnHover className='py-6'>
+		<Marquee autoFill  className='py-6'>
 			{brands.map(brand => (
 				<Image
 					key={brand.name}
@@ -51,7 +51,7 @@ const BrandsMarquee = () => {
 					height={150}
 					alt={`logo firrmy ${brand.name}`}
 					quality={50}
-					sizes='(max-width:768px) 150px,200px'
+					
                      className='w-[100px] sm:w-[150px] md:w-[200px] h-[70px] sm:h-[75px] md:h-[100px] object-contain mx-4 md:mx-6'
 				/>
 			))}
