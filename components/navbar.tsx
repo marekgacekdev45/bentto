@@ -34,10 +34,11 @@ const navLinks = [
 	},
 	{
 		id: 4,
-		title: 'Galeria',
-		href: '/galeria',
+		title: 'Realizacje',
+		href: '/realizacje',
 		desktop: true,
 	},
+	
 	{
 		id: 5,
 		title: 'Kontakt',

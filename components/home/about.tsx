@@ -49,7 +49,7 @@ const About = () => {
 							className='group bg-primary-600 hover:bg-secondary-400/80 duration-500 flex flex-col justify-start gap-4 px-6 py-12 2xl:p-12 shadow-md relative md:w-3/4 lg:w-full mx-auto'>
 							{offer.icon}
 							<h3
-								className='heading !text-2xl !leading-none group-hover:!text-primary-200 !duration-500'
+								className='heading !text-xl md:!text-2xl !leading-none group-hover:!text-primary-200 !duration-500'
 								dangerouslySetInnerHTML={{ __html: offer.title }}
 							/>
 							<p className='text group-hover:!text-primary-200 !duration-500'>{offer.description}</p>

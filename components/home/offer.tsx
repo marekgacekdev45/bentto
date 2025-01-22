@@ -32,7 +32,7 @@ const Offer = () => {
 		<section id='oferta' className='pb-12'>
 			<BrandsMarquee />
 
-			<div className='wrapper pt-12'>
+			<div className='wrapper pt-6 md:pt-12'>
 				<div className='max-w-screen-md mx-auto text-center space-y-1'>
 					<span className='preheading'>Nasze Usługi</span>
 					<h2 className='heading'>Kompleksowa oferta dla gastronomii</h2>
@@ -44,7 +44,7 @@ const Offer = () => {
 					</p>
 				</div>
 
-				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  pt-12'>
+				<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 pt-6 md:pt-12'>
 					{offers.map(offer => (
 						<div key={offer.title} className='border border-primary-700 shadow-lg px-4 xl:px-8 py-8 2xl:aspect-square flex flex-col justify-center items-center text-center gap-4 m-4 hover:-translate-y-3 duration-300'>
 							{offer.icon}

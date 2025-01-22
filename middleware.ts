@@ -3,7 +3,7 @@ import { NextResponse, type NextRequest } from 'next/server'
 export function middleware(request: NextRequest) {
 	const { pathname } = request.nextUrl
 
-	if (pathname === '/gallery' || pathname === '/blog') {
+	if (  pathname === '/blog' || pathname === '/realisations' || pathname === '/contact' || pathname === '/privacy-policy') {
 		return NextResponse.rewrite(new URL('/404', request.url))
 	}
 

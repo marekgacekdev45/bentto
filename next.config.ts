@@ -17,10 +17,7 @@ const nextConfig = {
 	},
 	async rewrites() {
 		return [
-			{
-				source: '/galeria',
-				destination: '/gallery',
-			},
+			
 			{
 				source: '/aktualnosci',
 				destination: '/blog',
@@ -28,6 +25,18 @@ const nextConfig = {
 			{
 				source: '/aktualnosci/:slug*',
 				destination: '/blog/:slug*',
+			},
+			{
+				source: '/realizacje',
+				destination: '/realisations',
+			},
+			{
+				source: '/kontakt',
+				destination: '/contact',
+			},
+			{
+				source: '/polityka-prywatnosci',
+				destination: '/privacy-policy',
 			},
 		]
 	},

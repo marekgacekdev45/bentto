@@ -2,6 +2,8 @@ import Hero from '@/components/home/hero'
 import About from '@/components/home/about'
 import AboutSecond from '@/components/home/about-second'
 import Offer from '@/components/home/offer'
+import Posts from '@/components/home/posts'
+import Realisations from '@/components/home/realisations'
 
 export default function Home() {
 	return (
@@ -10,6 +12,8 @@ export default function Home() {
 			<About />
 			<AboutSecond />
 			<Offer/>
+			<Posts/>
+			<Realisations/>
 		</>
 	)
 }
