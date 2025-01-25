@@ -37,6 +37,12 @@ export const post = defineType({
 			validation: (Rule) => Rule.required(),
 		}),
 		defineField({
+			name: 'excerpt',
+			title: 'Krótki opis',
+			type: 'string',
+			validation: (Rule) => Rule.required().max(160), 
+		}),
+		defineField({
 			name: 'content',
 			title: 'Treść',
 			type: 'array',

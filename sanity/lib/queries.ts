@@ -1,14 +1,50 @@
-import { defineQuery } from 'next-sanity'
+import { sanityFetch } from './client'
 
-export const GET_ALL_POSTS_QUERY = defineQuery(
-	`*[_type == "post"] | order(_publishedAt desc) {
-   ...
-  }`
-)
+export const GET_ALL_POSTS = async () => {
+	const query = `*[_type == "post"] | order(publishedAt desc) {
+    title,
+   "slug": slug.current,
+   thumbnail,
+   excerpt,
+ }`
 
-export const GET_POST_BY_SLUG_QUERY = defineQuery(
-	`*[_type == "post" && slug.current == $slug ][0] {
-   ...,
-     "pdfURL": pdf.asset->url
+	const data = await sanityFetch({
+		query: query,
+		revalidate: 60,
+	})
+	return data
+}
+
+export const GET_LAST_THREE_POSTS = async () => {
+	const query = `*[_type == "post"] | order(publishedAt desc)[0...3] {
+		title,
+	   "slug": slug.current,
+	   thumbnail,
+	   excerpt,
+	 }`
+
+	const data = await sanityFetch({
+		query: query,
+		revalidate: 60,
+	})
+
+	return data
+}
+
+export const GET_POST_BY_SLUG = async (slug: string) => {
+	const query = `
+	    *[_type == "post" && slug.current == "${slug}"][0]{
+    title,
+    "slug": slug.current,
+    thumbnail,
+	content,
+	publishedAt,
+    "pdf": pdf.asset->url,
   }`
-)
+
+	const data = await sanityFetch({
+		query: query,
+		revalidate: 60,
+	})
+	return data
+}
