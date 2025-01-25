@@ -8,7 +8,7 @@ import Button from '../button'
 const Posts = () => {
 	return (
 		<section className='pt-5 sm:pt-10 pb-10 xl:mt-32 2xl:mt-12 relative'>
-			<Image src={Background} alt='background' fill className='absolute inset-0 -z-20 ' />
+			<Image src={Background} alt='background' fill className='absolute inset-0 -z-20 object-cover ' />
 			<div className='absolute inset-0 -z-10 bg-black opacity-80 '></div>
 
 			<div className='wrapper !max-w-screen-xl text-white py-12'>
