@@ -61,7 +61,9 @@ const Navbar = () => {
 								<li key={item.id}>
 									<Link
 										href={item.href}
-										className={`uppercase text-lg font-bold text-black ${pathname === item.href ? 'link-active' : 'link-hover'}`}>
+										className={`uppercase text-lg font-bold text-black ${
+											pathname.startsWith(item.href) ? 'link-active' : 'link-hover'
+										  }`}>
 										{item.title}
 									</Link>
 								</li>

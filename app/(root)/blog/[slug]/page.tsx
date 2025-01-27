@@ -30,7 +30,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
 		<>
 			<Hero bgi={Background} heading='Aktualności' />
 
-			<section id='o-nas' className='pt-5 sm:pt-10 pb-20 xl:mt-32 2xl:mt-12'>
+			<section  className='pt-5 sm:pt-10 pb-20 xl:mt-32 2xl:mt-12'>
 				<div className='wrapper !max-w-screen-2xl'>
 					<div className='flex flex-col lg:flex-row gap-y-12'>
 						{/* Sticky Content */}

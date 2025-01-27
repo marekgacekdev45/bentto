@@ -48,3 +48,34 @@ export const GET_POST_BY_SLUG = async (slug: string) => {
 	})
 	return data
 }
+
+export const GET_ALL_REALISATIONS = async () => {
+	const query = `*[_type == "realisation"] | order(_createdAt desc) {
+    name,
+   "slug": slug.current,
+   thumbnail,
+ }`
+
+	const data = await sanityFetch({
+		query: query,
+		revalidate: 60,
+	})
+	return data
+}
+
+export const GET_REALISATION_BY_SLUG = async (slug: string) => {
+	const query = `
+	    *[_type == "realisation" && slug.current == "${slug}"][0]{
+    name,
+    "slug": slug.current,
+    address,
+	description,
+	images,
+  }`
+
+	const data = await sanityFetch({
+		query: query,
+		revalidate: 60,
+	})
+	return data
+}

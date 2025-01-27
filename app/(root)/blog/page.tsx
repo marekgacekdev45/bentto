@@ -17,7 +17,7 @@ const page = async () => {
 		<>
 			<Hero bgi={Background} heading='Aktualności' />
 
-			<section id='o-nas' className='pt-5 sm:pt-10 pb-20 xl:mt-32 2xl:mt-12'>
+			<section  className='pt-5 sm:pt-10 pb-20 xl:mt-32 2xl:mt-12'>
 				<div className='wrapper !max-w-screen-2xl'>
 					<div className='max-w-screen-md mx-auto text-center space-y-1'>
 						<span className='preheading'>Bądź na bieżąco</span>

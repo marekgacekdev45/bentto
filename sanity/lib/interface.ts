@@ -8,3 +8,12 @@ export interface Post {
 	content: any
 	pdf: any
 }
+export interface Realisation {
+	_id: string
+	name: string
+	slug: string
+	thumbnail: string
+	address:string
+	description:string
+	images: any
+}

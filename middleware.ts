@@ -7,7 +7,7 @@ export function middleware(request: NextRequest) {
 		return NextResponse.rewrite(new URL('/404', request.url))
 	}
 
-	if (pathname.startsWith('/blog')) {
+	if (pathname.startsWith('/blog') || pathname.startsWith('/realisations')) {
 		return NextResponse.rewrite(new URL('/404', request.url))
 	}
 

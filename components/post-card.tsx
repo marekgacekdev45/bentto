@@ -8,7 +8,7 @@ const PostCard = ({ post: { title, excerpt, slug, thumbnail } }: { post: Post })
 	return (
 	
 
-				<div className=' bg-primary-600 border border-primary-700  shadow-lg dark:bg-gray-800 dark:border-gray-700  flex flex-col md:flex-row lg:flex-col'>
+				<div className=' bg-primary-600 border border-primary-700  shadow-lg flex flex-col md:flex-row lg:flex-col'>
 					<div className='overflow-hidden w-full md:w-[45%] lg:w-full md:order-1 lg:order-none'>
 						<Link href={`/aktualnosci/${slug}`}>
 							<Image

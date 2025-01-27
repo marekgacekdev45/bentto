@@ -31,6 +31,10 @@ const nextConfig = {
 				destination: '/realisations',
 			},
 			{
+				source: '/realizacje/:slug*',
+				destination: '/realisations/:slug*',
+			},
+			{
 				source: '/kontakt',
 				destination: '/contact',
 			},
