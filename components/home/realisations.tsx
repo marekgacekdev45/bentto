@@ -1,9 +1,9 @@
-import RealisationImage from '@/public/images/1200/bentto-realizacje.webp'
-import Pattern from '@/public/pattern.webp'
-
 import Image from 'next/image'
 
-import Button from '../button'
+import Button from '@/components/button'
+
+import RealisationImage from '@/public/images/bentto-realizacje.webp'
+import Pattern from '@/public/pattern.webp'
 
 const Realisations = () => {
 	return (
@@ -19,11 +19,11 @@ const Realisations = () => {
 							estetyki i wysokiej jakości rozwiązań, które pomagają naszym klientom osiągać sukces w branży
 							gastronomicznej.
 						</p>
-            <p className='text pt-4 pb-6 sm:pb-10'>
-            Znajdziesz tu inspiracje, które pokazują, jak możemy dostosować nasze usługi do różnych
-							potrzeb – od małych kawiarni po duże restauracje. Przekonaj się, jak możemy pomóc stworzyć idealną
-							przestrzeń dla Twojego lokalu!
-            </p>
+						<p className='text pt-4 pb-6 sm:pb-10'>
+							Znajdziesz tu inspiracje, które pokazują, jak możemy dostosować nasze usługi do różnych potrzeb – od
+							małych kawiarni po duże restauracje. Przekonaj się, jak możemy pomóc stworzyć idealną przestrzeń dla
+							Twojego lokalu!
+						</p>
 
 						<Button href='/realizacje' label='zobacz realizacje' />
 					</div>

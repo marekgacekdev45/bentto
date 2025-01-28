@@ -1,29 +1,29 @@
 import Image from 'next/image'
 
-import { Home } from 'lucide-react'
-
 import Button from '@/components/button'
+
+import { Brush, CookingPot, Wrench } from 'lucide-react'
 
 const offers = [
 	{
 		id: 1,
 		title: 'Sprzęt gastronomiczny',
 		description: 'Dostarczamy najwyższej jakości urządzenia niezbędne w profesjonalnych kuchniach.',
-		icon: <Home className='text-secondary-400 group-hover:text-primary-200 duration-500 size-12' />,
+		icon: <CookingPot className='text-secondary-400 group-hover:text-primary-200 duration-500 size-12' />,
 		image: '/tlo-1.webp',
 	},
 	{
 		id: 2,
 		title: 'Projektowanie kuchni',
 		description: 'Tworzymy funkcjonalne i ergonomiczne projekty kuchni dostosowane do indywidualnych potrzeb klientów',
-		icon: <Home className='text-secondary-400 group-hover:text-primary-200 duration-500  size-12' />,
+		icon: <Brush className='text-secondary-400 group-hover:text-primary-200 duration-500  size-12' />,
 		image: '/tlo-2.webp',
 	},
 	{
 		id: 3,
 		title: 'Serwis <br/> urządzeń',
 		description: 'Zapewniamy profesjonalny serwis i wsparcie techniczne dla zakupionego u nas sprzętu',
-		icon: <Home className='text-secondary-400 group-hover:text-primary-200 duration-500  size-12' />,
+		icon: <Wrench className='text-secondary-400 group-hover:text-primary-200 duration-500  size-12' />,
 		image: '/tlo-3.webp',
 	},
 ]

@@ -1,7 +1,9 @@
-import Logo from '@/public/logo.webp'
-import { Facebook, Mail, MapPin, Phone } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+
+import { Facebook, Mail, MapPin, Phone } from 'lucide-react'
+
+import Logo from '@/public/logo.webp'
 
 const Footer = () => {
 	const currentYear = new Date().getFullYear()
@@ -26,7 +28,7 @@ const Footer = () => {
 							</Link>
 						</div>
 						<div className='lg:w-[60%] xl:w-1/2  flex flex-col sm:flex-row justify-center items-center sm:items-start sm:justify-between gap-6 sm:gap-0'>
-							<div className='w-1/3 text-center sm:text-left'>
+							<div className='sm:w-1/3 text-center sm:text-left'>
 								<h2 className='text-2xl font-bold text-black mb-4'>Menu</h2>
 								<ul className='flex flex-col justify-center items-center sm:justify-start sm:items-start gap-3'>
 									<li>
@@ -62,7 +64,7 @@ const Footer = () => {
 								</ul>
 							</div>
 
-							<div className='w-1/3 text-center sm:text-left'>
+							<div className='sm:w-1/3 text-center sm:text-left'>
 								<h2 className='text-2xl font-bold text-black mb-4'>Kontakt</h2>
 								<ul className='flex flex-col justify-center items-center sm:justify-start sm:items-start gap-3'>
 									<li>
@@ -91,7 +93,7 @@ const Footer = () => {
 								</ul>
 							</div>
 
-							<div className='w-1/3 sm:pl-16 text-center sm:text-left'>
+							<div className='sm:w-1/3 sm:pl-16 text-center sm:text-left'>
 								<h2 className='text-2xl font-bold text-black mb-4'>Social </h2>
 								<ul className='flex flex-col justify-center items-center sm:justify-start sm:items-start gap-3 '>
 									<li>

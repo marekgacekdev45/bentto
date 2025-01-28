@@ -1,5 +1,5 @@
-import React from 'react'
 import BrandsMarquee from '@/components/brands-marquee'
+
 import { CookingPot,ChefHat, SquarePen, Wrench } from 'lucide-react'
 
 const offers = [

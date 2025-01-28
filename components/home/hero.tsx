@@ -1,8 +1,8 @@
-import Button from '@/components/button'
 import Image from 'next/image'
 
-import HeroImg from '@/public/images/1200/bentto-56.webp'
+import Button from '@/components/button'
 
+import HeroImg from '@/public/images/bentto-hero.webp'
 import Pattern from '@/public/pattern.webp'
 
 const Hero = () => {

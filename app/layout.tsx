@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
+import { generateMetadata } from '@/lib/generateMetadata'
+
 import { Montserrat } from 'next/font/google'
+
 import './globals.css'
 
 const montserrat = Montserrat({
@@ -7,11 +10,7 @@ const montserrat = Montserrat({
 	subsets: ['latin'],
 })
 
-export const metadata: Metadata = {
-	title: 'Bentto - Urządzenia Gastonomiczne Nowy Targ',
-	description:
-		'Bentto - Odkryj najlepsze urządzenia gastronomiczne w Nowym Targu. Jako eksperci w branży, oferujemy rozwiązania, które podniosą jakość Twojego biznesu. Sprawdź naszą ofertę już teraz!',
-}
+export const metadata: Metadata = generateMetadata({})
 
 export default function RootLayout({
 	children,
@@ -20,6 +19,8 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='pl'>
+			<meta name='apple-mobile-web-app-title' content='Bentto' />
+
 			<body className={`${montserrat.className}  antialiased `}>{children}</body>
 		</html>
 	)
