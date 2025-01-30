@@ -1,6 +1,34 @@
 import Hero from '@/components/hero'
 
-import Background from '@/public/images/1600/bentto-68.webp'
+import Background from '@/public/bentto-polityka-prywatnosci.webp'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+	title: 'Polityka Prywatności',
+	description:
+		'Zapoznaj się z naszą Polityką Prywatności – sprawdź, jak chronimy Twoje dane, jakie informacje zbieramy i w jaki sposób je wykorzystujemy',
+
+	openGraph: {
+		title: 'Polityka Prywatności | Bentto - Urządzenia Gastonomiczne Nowy Targ',
+		description:
+			'Zapoznaj się z naszą Polityką Prywatności – sprawdź, jak chronimy Twoje dane, jakie informacje zbieramy i w jaki sposób je wykorzystujemy',
+		type: 'website',
+		locale: 'pl_PL',
+		url: 'https://bentto.eu/polityka-prywatnosci',
+		siteName: 'Bentto - Urządzenia Gastonomiczne',
+		images: [
+			{
+				url: '/bentto-polityka-prywatnosci.webp',
+				width: 1200,
+				height: 630,
+				alt: 'Bentto - Urządzenia Gastonomiczne Nowy Targ',
+			},
+		],
+	},
+	alternates: {
+		canonical: 'https://bentto.eu/polityka-prywatnosci',
+	},
+}
 
 const page = () => {
 	return (

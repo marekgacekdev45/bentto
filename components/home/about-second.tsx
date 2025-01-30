@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import Button from '@/components/button'
 
-import AboutImage from '@/public/images/bentto-o-nas.webp'
+import AboutImage from '@/public/bentto-o-nas.webp'
 import Pattern from '@/public/pattern.webp'
 
 const AboutSecond = () => {

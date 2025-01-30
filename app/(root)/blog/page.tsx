@@ -1,14 +1,41 @@
-import Button from '@/components/button'
+import { Post } from '@/sanity/lib/interface'
+import { GET_ALL_POSTS } from '@/sanity/lib/queries'
+
+import { Metadata } from 'next'
+
 import Hero from '@/components/hero'
 import PostCard from '@/components/post-card'
 
-import Background from '@/public/images/1600/bentto-32.webp'
-import { Post } from '@/sanity/lib/interface'
-import { GET_ALL_POSTS } from '@/sanity/lib/queries'
-import Image from 'next/image'
-import Link from 'next/link'
+import Background from '@/public/bentto-aktualnosci.webp'
 
 export const revalidate = 60
+
+export const metadata: Metadata = {
+	title: 'Aktualności',
+	description:
+		'Przeczytaj najnowsze wiadomości i aktualności Bentto – informacje o nowych produktach, promocjach oraz nadchodzących wydarzeniach i ofertach.',
+
+	openGraph: {
+		title: 'Aktualności | Bentto - Urządzenia Gastonomiczne Nowy Targ',
+		description:
+			'Przeczytaj najnowsze wiadomości i aktualności Bentto – informacje o nowych produktach, promocjach oraz nadchodzących wydarzeniach i ofertach.',
+		type: 'website',
+		locale: 'pl_PL',
+		url: 'https://bentto.eu/aktualnosci',
+		siteName: 'Bentto - Urządzenia Gastonomiczne',
+		images: [
+			{
+				url: '/bentto-aktualnosci.webp',
+				width: 1200,
+				height: 630,
+				alt: 'Bentto - Urządzenia Gastonomiczne Nowy Targ',
+			},
+		],
+	},
+	alternates: {
+		canonical: 'https://bentto.eu/aktualnosci',
+	},
+}
 
 const page = async () => {
 	const posts: Post[] = await GET_ALL_POSTS()
@@ -17,7 +44,7 @@ const page = async () => {
 		<>
 			<Hero bgi={Background} heading='Aktualności' />
 
-			<section  className='pt-5 sm:pt-10 pb-20 xl:mt-32 2xl:mt-12'>
+			<section className='pt-5 sm:pt-10 pb-20 xl:mt-32 2xl:mt-12'>
 				<div className='wrapper !max-w-screen-2xl'>
 					<div className='max-w-screen-md mx-auto text-center space-y-1'>
 						<span className='preheading'>Bądź na bieżąco</span>

@@ -6,7 +6,7 @@ import { GET_LAST_THREE_POSTS } from '@/sanity/lib/queries'
 
 import PostCard from '@/components/post-card'
 
-import Background from '@/public/images/bentto-posty-tlo.webp'
+import Background from '@/public/bentto-posty-tlo.webp'
 
 const Posts = async () => {
 	const posts: Post[] = await GET_LAST_THREE_POSTS()

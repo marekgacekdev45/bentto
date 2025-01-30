@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import Button from '@/components/button'
 
-import RealisationImage from '@/public/images/bentto-realizacje.webp'
+import RealisationImage from '@/public/bentto-realizacje.webp'
 import Pattern from '@/public/pattern.webp'
 
 const Realisations = () => {

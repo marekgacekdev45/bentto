@@ -1,22 +1,52 @@
-import Hero from '@/components/hero'
-import { GET_REALISATION_BY_SLUG } from '@/sanity/lib/queries'
-import React from 'react'
+import { Metadata } from 'next'
 
-import Background from '@/public/images/1600/bentto-32.webp'
 import { Realisation } from '@/sanity/lib/interface'
+import { GET_REALISATION_BY_SLUG } from '@/sanity/lib/queries'
 import { urlFor } from '@/sanity/lib/image'
+
+import Hero from '@/components/hero'
 import RealisationGallery from '@/components/realisation-gallery'
+
+import Background from '@/public/bentto-realizacja.webp'
 
 export const revalidate = 60
 
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata | undefined> {
+	const { slug } = await params
+
+	const realisation: Realisation = await GET_REALISATION_BY_SLUG(slug)
+
+	return {
+		title: `${realisation.name} | Bentto - Urządzenia Gastonomiczne Nowy Targ`,
+		description: `Zobacz realizację ${realisation.name} – unikalny projekt Bentto, który łączy elegancję z funkcjonalnością. Sprawdź, jak nasze produkty zmieniają przestrzeń.`,
+		alternates: {
+			canonical: `https://bentto.eu/${realisation.slug}`,
+		},
+		openGraph: {
+			title: `${realisation.name} | Bentto - Urządzenia Gastonomiczne Nowy Targ`,
+			description: `Zobacz realizację ${realisation.name} – unikalny projekt Bentto, który łączy elegancję z funkcjonalnością. Sprawdź, jak nasze produkty zmieniają przestrzeń.`,
+			type: 'article',
+			locale: 'pl_PL',
+			url: `https://bentto.eu/${realisation.slug}`,
+			siteName: 'Bentto - Urządzenia Gastonomiczne Nowy Targ',
+			images: [
+				{
+					url: urlFor(realisation.thumbnail).url(),
+					width: 1200,
+					height: 630,
+					alt: `miniaturka ${realisation.name} | Bentto - Urządzenia Gastonomiczne Nowy Targ`,
+				},
+			],
+		},
+	}
+}
+
 const page = async ({ params }: { params: { slug: string } }) => {
-    
 	const { slug } = await params
 
 	const { name, address, description, images }: Realisation = await GET_REALISATION_BY_SLUG(slug)
 
-    const imageUrls = images.map((image: any) => urlFor(image).url())
-
+	const imageUrls = images.map((image: any) => urlFor(image).url())
 
 	return (
 		<>
@@ -30,7 +60,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
 						{description && <p className='prose text pt-4'>{description}</p>}
 					</div>
 					<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
-                    <RealisationGallery images={imageUrls} alt={name} />
+						<RealisationGallery images={imageUrls} alt={name} />
 					</div>
 				</div>
 			</section>

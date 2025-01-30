@@ -70,6 +70,7 @@ export const GET_REALISATION_BY_SLUG = async (slug: string) => {
     "slug": slug.current,
     address,
 	description,
+	thumbnail,
 	images,
   }`
 

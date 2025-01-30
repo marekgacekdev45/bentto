@@ -1,13 +1,42 @@
-import Hero from '@/components/hero'
-import React from 'react'
-import Background from '@/public/images/1600/bentto-32.webp'
-import Link from 'next/link'
-import Image from 'next/image'
-import RealisationCard from '@/components/realisation-card'
-import { GET_ALL_REALISATIONS } from '@/sanity/lib/queries'
+import { Metadata } from 'next'
+
 import { Realisation } from '@/sanity/lib/interface'
+import { GET_ALL_REALISATIONS } from '@/sanity/lib/queries'
+
+import Hero from '@/components/hero'
+import RealisationCard from '@/components/realisation-card'
+
+import Background from '@/public/bentto-nasze-realizacje.webp'
 
 export const revalidate = 60
+
+
+export const metadata: Metadata = {
+	title: 'Realizacje',
+	description:
+		'Zobacz nasze realizacje – wyjątkowe projekty Bentto, które łączą styl i funkcjonalność. Inspiracje do Twoich przestrzeni z naszymi produktami',
+
+	openGraph: {
+		title: 'Realizacje | Bentto - Urządzenia Gastonomiczne Nowy Targ',
+		description:
+			'Zobacz nasze realizacje – wyjątkowe projekty Bentto, które łączą styl i funkcjonalność. Inspiracje do Twoich przestrzeni z naszymi produktami',
+		type: 'website',
+		locale: 'pl_PL',
+		url: 'https://bentto.eu/realizacje',
+		siteName: 'Bentto - Urządzenia Gastonomiczne',
+		images: [
+			{
+				url: '/bentto-nasze-realizacje.webp',
+				width: 1200,
+				height: 630,
+				alt: 'Bentto - Urządzenia Gastonomiczne Nowy Targ',
+			},
+		],
+	},
+	alternates: {
+		canonical: 'https://bentto.eu/realizacje',
+	},
+}
 
 const page = async () => {
 	const realisations = await GET_ALL_REALISATIONS()
@@ -40,9 +69,7 @@ const page = async () => {
 							<RealisationCard key={`${realisation.name}-${realisation._id}`} realisation={realisation} />
 						))}
 
-						{/* {posts.map((post: Post) => (
-							<PostCard post={post} />
-						))} */}
+						
 					</div>
 				</div>
 			</section>

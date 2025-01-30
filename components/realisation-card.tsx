@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import Background from '@/public/images/1600/bentto-32.webp'
 import { Realisation } from '@/sanity/lib/interface'
 import { urlFor } from '@/sanity/lib/image'
 
@@ -18,7 +17,7 @@ const RealisationCard = ({ realisation: { slug, name, thumbnail } }: { realisati
 				/>
 			</div>
 
-			<h3 className=' text-2xl font-black text-black  p-5 text-center'>{name}</h3>
+			<h3 className=' text-2xl font-black text-black  p-10 text-center'>{name}</h3>
 		</Link>
 	)
 }
