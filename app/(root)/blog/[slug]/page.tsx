@@ -10,7 +10,7 @@ import { urlFor } from '@/sanity/lib/image'
 import { PortableText } from '@portabletext/react'
 
 import Hero from '@/components/hero'
-import Background from '@/public/images/bentto-post.webp'
+import Background from '@/public/bentto-post.webp'
 
 export const revalidate = 60
 
