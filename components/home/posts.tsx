@@ -7,6 +7,7 @@ import { GET_LAST_THREE_POSTS } from '@/sanity/lib/queries'
 import PostCard from '@/components/post-card'
 
 import Background from '@/public/bentto-posty-tlo.webp'
+import Button from '@/components/button'
 
 const Posts = async () => {
 	const posts: Post[] = await GET_LAST_THREE_POSTS()
@@ -32,6 +33,11 @@ const Posts = async () => {
 						<PostCard key={`${post.slug}-${post._id}`} post={post} />
 					))}
 				</div>
+
+<div className='flex justify-center pt-6 md:pt-12'>
+
+				<Button href='/aktualnosci' label='Zobacz więcej' />
+</div>
 			</div>
 		</section>
 	)

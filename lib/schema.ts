@@ -1,18 +1,18 @@
 import { z } from 'zod'
 
-export const FormDataSchema = z.object({
-  name: z.string().nonempty('Name is required.'),
-  message: z
-    .string()
-    .nonempty('Message is required.')
-    .min(6, { message: 'Message must be at least 6 characters.' })
-})
-
-export const ContactFormSchema = z.object({
-  name: z.string().nonempty('Name is required.'),
-  email: z.string().nonempty("Email is required.'").email('Email is invalid.'),
-  message: z
-    .string()
-    .nonempty('Message is required.')
-    .min(6, { message: 'Message must be at least 6 characters.' })
+export const formSchema = z.object({
+	name: z
+		.string()
+		.nonempty('Pole wymagane.')
+		.min(3, { message: 'Imię i nazwisko muszą mieć przynajmniej 3 znaki.' })
+		.max(50, { message: 'Imię i nazwisko mogą mieć maksymalnie 50 znaków.' }),
+	phone: z.string(),
+	email: z
+  .string()
+  .nonempty("Pole wymagane.'")
+  .email('Email jest niepoprawny.'),
+	message: z
+  .string()
+  .nonempty('Pole wymagane.')
+  .min(6, { message: 'Wiadomość musi mieć przynajmniej 3 znaki.' }),
 })

@@ -61,6 +61,8 @@ const page = async () => {
 							<PostCard post={post} />
 						))}
 					</div>
+
+					
 				</div>
 			</section>
 		</>

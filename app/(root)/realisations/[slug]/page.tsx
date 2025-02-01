@@ -56,8 +56,9 @@ const page = async ({ params }: { params: { slug: string } }) => {
 				<div className='wrapper !max-w-screen-2xl space-y-12'>
 					<div className='max-w-screen-lg mx-auto text-center space-y-1'>
 						<h2 className='heading'>{name}</h2>
+						
 						{address && <p className=' text pt-4'>{address}</p>}
-						{description && <p className='prose text pt-4'>{description}</p>}
+						{description && <p className='text pt-1 '>{description}</p>}
 					</div>
 					<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
 						<RealisationGallery images={imageUrls} alt={name} />

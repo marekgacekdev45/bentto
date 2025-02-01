@@ -12,8 +12,8 @@ const RealisationCard = ({ realisation: { slug, name, thumbnail } }: { realisati
 					src={urlFor(thumbnail).url()}
 					alt={`miniaturka realizacji o tytule ${name}`}
 					className=' aspect-square max-h-[400px] object-cover w-full group-hover:scale-105 duration-300'
-					width={335}
-					height={250}
+					width={635}
+					height={550}
 				/>
 			</div>
 
