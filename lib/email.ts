@@ -10,8 +10,8 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 export const send = async (emailFormData: z.infer<typeof formSchema>) => {
 	try {
 		const { data, error } = await resend.emails.send({
-			from: `bennto.eu <${process.env.RESEND_FROM_EMAIL}>`,
-			to: [`${process.env.RESEND_TO_EMAIL}`],
+			from: `bennto.eu <onboarding@resend.dev>`,
+			to: ['marekgacekdev45@gmail.com'],
 			subject: 'Nowa wiadomość ze strony bentto.eu',
 			react: EmailTemplate(emailFormData),
 		})
