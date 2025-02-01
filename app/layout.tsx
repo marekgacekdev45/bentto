@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 
 import { Montserrat } from 'next/font/google'
 
-import './globals.css'
 import { Toaster } from 'sonner'
+
+import './globals.css'
 
 const montserrat = Montserrat({
 	weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -51,12 +53,18 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='pl'>
-			<meta name='apple-mobile-web-app-title' content='Bentto' />
-			<meta name='theme-color' content='#ffffff' />
+			<head>
+				<Script
+					src={`https://cdn-cookieyes.com/client_data/5d5be7a176eb3875f9d137c8/script.js`}
+					strategy='beforeInteractive'></Script>
+				<meta name='apple-mobile-web-app-title' content='Bentto' />
+				<meta name='theme-color' content='#ffffff' />
+			</head>
 
-			<body className={`${montserrat.className}  antialiased `}>{children}
+			<body className={`${montserrat.className}  antialiased `}>
+				{children}
 
-			<Toaster richColors expand closeButton/>
+				<Toaster richColors expand closeButton />
 			</body>
 		</html>
 	)
