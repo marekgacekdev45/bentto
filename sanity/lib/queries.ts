@@ -37,6 +37,7 @@ export const GET_POST_BY_SLUG = async (slug: string) => {
     title,
     "slug": slug.current,
     thumbnail,
+	excerpt,
 	content,
 	publishedAt,
     "pdf": pdf.asset->url,

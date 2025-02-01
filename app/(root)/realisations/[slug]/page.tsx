@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 		},
 		openGraph: {
 			title: `${realisation.name} | Bentto - Urządzenia Gastonomiczne Nowy Targ`,
-			description: `Zobacz realizację ${realisation.name} – unikalny projekt Bentto, który łączy elegancję z funkcjonalnością. Sprawdź, jak nasze produkty zmieniają przestrzeń.`,
+			description: `Zobacz realizację ${realisation.name} –  Bentto. Sprawdź, jak nasze produkty zmieniają przestrzeń.`,
 			type: 'article',
 			locale: 'pl_PL',
 			url: `https://bentto.eu/${realisation.slug}`,

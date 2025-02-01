@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 		siteName: 'Bentto - Urządzenia Gastonomiczne',
 		images: [
 			{
-				url: '/bentto-polityka-prywatnosci.webp',
+				url: 'https://bentto.eu/bentto-polityka-prywatnosci.webp',
 				width: 1200,
 				height: 630,
 				alt: 'Bentto - Urządzenia Gastonomiczne Nowy Targ',

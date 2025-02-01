@@ -40,6 +40,15 @@ export const metadata: Metadata = {
 		locale: 'pl_PL',
 		url: 'https://bentto.eu/',
 		siteName: 'Bentto - Urządzenia Gastonomiczne',
+		images: [
+			{
+				url: 'https://bentto.eu/bentto-o-nas.webp',
+				width: 1200,
+				height: 630,
+				alt: 'Bentto - Urządzenia Gastonomiczne Nowy Targ',
+			},
+		],
+	
 	},
 	alternates: {
 		canonical: 'https://bentto.eu/',
