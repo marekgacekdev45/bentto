@@ -27,12 +27,12 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({ name, ph
 					</Heading>
 					<Text className='text-black text-[14px] leading-[24px]'>{message}</Text>
 
-					<Heading as='h2' className='text-black text-[18px] font-normal p-0 mx-0'>
-						Email: <strong>{email}</strong>
+					<Heading as='h2' className='text-black text-[18px] font-bold p-0 mx-0'>
+						Email: <span className='text-[14px]'>{email}</span>
 					</Heading>
 					{phone && (
-						<Heading as='h2' className='text-black text-[18px] font-normal p-0 mx-0'>
-							Telefon: <strong>{phone}</strong>
+						<Heading as='h2' className='text-black text-[18px] font-bold p-0 mx-0'>
+							Telefon: : <span className='text-[14px]'>{phone}</span>
 						</Heading>
 					)}
 
