@@ -11,7 +11,7 @@ export const send = async (emailFormData: z.infer<typeof formSchema>) => {
 	try {
 		const { data, error } = await resend.emails.send({
 			from: `bennto.eu <onboarding@resend.dev>`,
-			to: ['marekgacekdev45@gmail.com'],
+			to: ['bentto@onet.eu'],
 			subject: 'Nowa wiadomość ze strony bentto.eu',
 			react: EmailTemplate(emailFormData),
 		})
