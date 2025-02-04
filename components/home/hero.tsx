@@ -27,7 +27,7 @@ const Hero = () => {
 
 					<ul className='flex flex-wrap sm:flex-nowrap justify-center lg:justify-start items-center mt-12 md:mt-16 w-full gap-6 md:gap-12'>
 						<li className='flex flex-col'>
-							<span className='text-3xl sm:text-4xl xl:text-5xl font-bold text-black uppercase'>10+</span>
+							<span className='text-3xl sm:text-4xl xl:text-5xl font-bold text-black uppercase'>20+</span>
 							<span className='sm:text-lg'>Lat doświadczenia</span>
 						</li>
 						<li className='flex flex-col'>
